@@ -1,0 +1,104 @@
+
+:root {
+  --bg: #726144;       /* warm paper */
+  --surface: #61461b;  /* soft beige */
+  --text: hsl(20, 19%, 6%);     /* warm near-black */
+  --muted: #352d28;    /* warm gray */
+  --border: #070706;   /* hairline */
+}
+
+html {
+  background-color:var(--bg) ;
+}
+
+.hero {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero__text {
+  max-width: 560px;
+}
+
+.hero__eyebrow {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.hero__title {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: clamp(40px, 4.8vw, 66px);
+  line-height: 1.05;
+}
+
+.hero__subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Media block */
+.hero__media {
+  position: relative;
+  min-height: 420px;
+
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+
+/* Fade/blend toward text (left side of image) */
+.hero__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* Stronger on the left, clear on the right */
+  background: linear-gradient(
+    90deg,
+    rgba(65, 60, 54, 0.95) 0%,
+    rgba(151, 148, 144, 0.55) 24%,
+    rgba(48, 44, 39, 0) 58%
+  );
+
+  pointer-events: none;
+}
+
+.img {
+  height: 600px
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hero {
+    padding: 72px 20px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero__media {
+    min-height: 360px;
+    max-width: 600px;
+    min-width:360px;
+  }
+}
