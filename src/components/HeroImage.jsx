@@ -1,8 +1,9 @@
 import React from "react"
-import heroImage from "./../assets/kitchen_coffee.png"
 
-function HeroImage() {
-    return <img className="img" src={heroImage} alt="Guy making coffee"/>
+function HeroImage(props) {
+    return         <div className="hero__media" aria-label="Hero image">
+    <img className="img" src={props.heroImage} alt="Guy making coffee"/>
+    </div>
 }
 
 export default HeroImage;
