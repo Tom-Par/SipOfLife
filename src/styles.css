@@ -70,15 +70,6 @@ html {
   content: "";
   position: absolute;
   inset: 0;
-
-  /* Stronger on the left, clear on the right */
-  background: linear-gradient(
-    90deg,
-    rgba(65, 60, 54, 0.95) 0%,
-    rgba(151, 148, 144, 0.55) 24%,
-    rgba(48, 44, 39, 0) 58%
-  );
-
   pointer-events: none;
 }
 
