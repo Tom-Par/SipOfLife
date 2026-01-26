@@ -50,6 +50,12 @@ a {
   text-decoration: none;
 }
 
+.section--full {
+  display: flex;
+  align-items: center;
+}
+
+
 /* =========================
    Layout utilities
    ========================= */
@@ -255,6 +261,75 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+    Travel
+   ========================= */
+
+.section--travel 
+{
+  padding: 120px 0;
+}
+
+.travel {
+  /* the "extra air" you asked for */
+  padding: 28px 0;
+  display: block;
+}
+
+.travelImage {
+  max-width: 1250px;
+  max-height: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+  
+  border-radius: 18px;
+  overflow: hidden;
+
+  margin: 100px auto;
+}
+
+
+.travelImage img {
+  width: 100%;
+  margin: -200px 0 0 0;
+}
+
+.travelContent {
+  margin-top: 0;
+}
+
+.travelSectionTitle {
+  font-size: 150px;
+  text-align: right;
+  margin: 0;
+}
+
+.travelText {
+  max-width: 720px; /* keeps reading comfortable */
+}
+
+.travelText p {
+  color: var(--muted);
+  line-height: 1.85;
+  margin: 0 0 14px;
+}
+
+/* Responsive: slightly taller image on mobile */
+@media (max-width: 900px) {
+  .travel {
+    padding: 18px 0;
+  }
+
+  .travelImage {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 22px;
+    border-radius: 16px;
+  }
+}
+
+
 
 /* =========================
    Footer
