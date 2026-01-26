@@ -3,12 +3,13 @@ import React from 'react';
 function Highlights() {
   const items = [
     {
-      title: "Coffee",
-      text: "Warm cups, quiet kitchens, and the ritual of slowing down.",
-    },
-    {
+      
       title: "Travel",
       text: "Small walks, train windows, and new streets at a gentle pace.",
+    },
+    {
+      title: "Coffee",
+      text: "Warm cups, quiet kitchens, and the ritual of slowing down.",
     },
     {
       title: "Music",
