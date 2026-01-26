@@ -10,8 +10,8 @@ export default function App() {
     <div>
       <Header />
       <main>
-        <Hero />;
-        <Highlights />;
+        <Hero />
+        <Highlights />
       </main>
       <Footer />
     </div>

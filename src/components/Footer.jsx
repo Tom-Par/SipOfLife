@@ -8,10 +8,10 @@ function Footer() {
       <div className="container footerInner">
         <p className="footerText">© {year} SipOfLife</p>
         <div className="footerLinks">
-          <a href="https://github.com/yourname" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Tom-Par" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/tomasz-paruzel-a9a397228/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>

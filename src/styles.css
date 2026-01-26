@@ -3,13 +3,19 @@
    ========================= */
 
 :root {
-  --bg: #faf7f2;
-  --surface: #f3eee6;
-  --text: #1f1a17;
-  --muted: #5c524c;
-  --accent: #7f5539;
-  --border: #e6ded3;
+  --bg: #613714;          /* deep coffee brown */
+  --surface: rgba(255, 248, 240, 0.08); /* transparent card */
+  --surface2: rgba(255, 248, 240, 0.12);
+  --text: #F8F4E1;        /* warm off-white */
+  --muted: rgba(255, 246, 238, 0.72);
+  --accent: #AF8F6F;      /* latte accent */
+  --border: rgba(255, 248, 240, 0.18);
+  --header-bg: rgba(35, 20, 5, 0.35);      /* dark-glass tint */
+  --header-border: rgba(255, 246, 238, 0.10);
+  --header-text: rgba(255, 246, 238, 0.78);
+  --header-text-muted: rgba(255, 246, 238, 0.55);
 }
+
 
 *,
 *::before,
@@ -23,12 +29,21 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
+
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1200px 600px at 20% 10%, rgba(210,166,121,0.10), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(210,166,121,0.08), transparent 55%),
+    url("./assets/black-felt.png");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: auto, auto, 420px;
+  background-position: center, center, top left;
 }
+
 
 a {
   color: inherit;
@@ -65,41 +80,47 @@ a {
    Header
    ========================= */
 
-.header {
-  position: sticky;
+.header{
+  position: fixed;
   top: 0;
-  z-index: 10;
-  background: rgba(250, 247, 242, 0.85);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--border);
+  left: 0;
+  right: 0;
+  height: 72px;
+  z-index: 50;
+
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--header-border);
 }
 
-.headerInner {
+.headerInner{
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
 }
 
-.brand {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+.brand{
+  color: var(--header-text);
+  text-decoration: none;
 }
 
-.nav {
-  display: flex;
-  gap: 24px;
+.nav a{
+  color: var(--header-text-muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: color 160ms ease, background 160ms ease;
 }
 
-.nav a {
-  font-size: 14px;
-  color: var(--muted);
+.nav a:hover{
+  color: var(--header-text);
+  background: rgba(255, 246, 238, 0.07);
 }
 
-.nav a:hover {
-  color: var(--text);
-}
+
 
 /* =========================
    Hero
@@ -112,12 +133,13 @@ a {
 .heroInner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 64px;
   align-items: center;
+  gap: 64px;
 }
 
 .heroText {
   max-width: 520px;
+  padding-left: 40px;
 }
 
 .heroEyebrow {
@@ -149,6 +171,7 @@ a {
 
   background: var(--surface);
   border: 1px solid var(--border);
+  transform: translateX(-40px);
 }
 
 .heroImg {
@@ -162,6 +185,11 @@ a {
   .heroMedia {
     height: 360px;
     border-radius: 16px;
+    transform: none;
+  }
+
+  .heroText {
+    padding-left: 0;
   }
 
   .heroMedia::before {
