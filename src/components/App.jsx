@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import TopicSection from "./TopicSection";
 import { topics } from "../content/topics";
 import TravelSection from "./TravelSection";
+import SectionDivider from "./SectionDivider";
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <main id="top">
         <Hero />
         <Highlights />
+        <SectionDivider/>
         <TravelSection />
 
         {topics

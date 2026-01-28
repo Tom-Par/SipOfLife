@@ -10,18 +10,21 @@ export default function TravelSection() {
         </div>
 
         <div className="travelContent">
-          <h2 className="travelSectionTitle">Travel</h2>
 
-          <p className="travelP">
-            I like moving slowly through places. Trains instead of planes, walking
-            instead of rushing. Watching how light changes in unfamiliar streets.
-          </p>
+          <div className="travelBody">
+            <p className="travelP">
+              I like moving slowly through places. Trains instead of planes, walking
+              instead of rushing. Watching how light changes in unfamiliar streets.
+            </p>
 
-          <p className="travelP">
-            Travel, for me, is not about collecting destinations, but about paying
-            attention — to sounds, to colors, to small moments that would be easy
-            to miss otherwise.
-          </p>
+            <p className="travelP">
+              Travel, for me, is not about collecting destinations, but about paying
+              attention — to sounds, to colors, to small moments that would be easy
+              to miss otherwise.
+            </p>
+          </div>
+          <h2 className="travelTitle">Travel</h2>
+          
         </div>
       </div>
     </section>
